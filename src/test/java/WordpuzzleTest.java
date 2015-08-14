@@ -36,14 +36,24 @@ public class WordpuzzleTest extends FluentTest {
   public void replaceVowels_vowelBecomesDash_true() {
     Wordpuzzle wp = new Wordpuzzle();
     String expValue = "-";
-    assertEquals(expValue, wp.replaceVowels(wp.splitStringByChar("Cat dog."))[1]);
+    String[] charArray = wp.splitStringByChar("Cat dog.");
+    assertEquals(expValue, wp.replaceVowels(charArray)[1]);
   }
 
   @Test
   public void replaceVowels_nonvowelDoesntChange_true() {
     Wordpuzzle wp = new Wordpuzzle();
     String expValue = ".";
-    assertEquals(expValue, wp.replaceVowels(wp.splitStringByChar("Cat dog."))[7]);
+    String[] charArray = wp.splitStringByChar("Cat dog.");
+    assertEquals(expValue, wp.replaceVowels(charArray)[7]);
+  }
+
+  @Test
+  public void convertArraytoReadableString_arrayBecomesString_true() {
+    Wordpuzzle wp = new Wordpuzzle();
+    String expValue = "Short sentence.";
+    String[] charArray = wp.splitStringByChar("Short sentence.");
+    assertEquals(expValue, wp.convertArraytoReadableString(charArray));
   }
 
   /*

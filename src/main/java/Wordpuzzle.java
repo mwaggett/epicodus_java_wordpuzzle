@@ -2,6 +2,8 @@ import java.util.Random;
 import java.util.HashMap;
 import java.util.Arrays;
 import java.util.ArrayList;
+//import java.util.StringBuilder;
+import java.lang.*;
 import static spark.Spark.*;
 import spark.ModelAndView;
 // import spark.template.velocity.VelocityTemplateEngine;
@@ -33,7 +35,7 @@ public class Wordpuzzle {
     */
   }
 
-  public static String[] splitStringByChar (String sentence) {
+  public static String[] splitStringByChar(String sentence) {
     String[] charArray = sentence.split("");
     return charArray;
     // I'm still trying to figure out what processes should be separate methods
@@ -42,7 +44,7 @@ public class Wordpuzzle {
     // literally just calling the split() method.
   }
 
-  public static String[] replaceVowels (String[] charArray) {
+  public static String[] replaceVowels(String[] charArray) {
     Integer count = 0;
     for (String character : charArray) {
       if (character.equals("a") || character.equals("e") || character.equals("i")
@@ -54,6 +56,16 @@ public class Wordpuzzle {
       count += 1;
     }
     return charArray;
+  }
+
+  public static String convertArraytoReadableString(String[] charArray) {
+    StringBuilder puzzleBuild = new StringBuilder();
+    for (Integer i = 0; i < charArray.length; i++) {
+      puzzleBuild.append(charArray[i]);
+    }
+    String puzzle = puzzleBuild.toString();
+    System.out.println(puzzle);
+    return puzzle;
   }
 
 }
