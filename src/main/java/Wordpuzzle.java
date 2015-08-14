@@ -30,11 +30,16 @@ public class Wordpuzzle {
 
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+    */
   }
 
-  public static <OutputClass> methodName (<Class> arg) {
-
+  public static String[] splitStringByChar (String sentence) {
+    String[] charArray = sentence.split("");
+    return charArray;
+    // I'm still trying to figure out what processes should be separate methods
+    // and what should be grouped together. For example, this method is doing a
+    // separate process, but I also see no point in separating it because I'm
+    // literally just calling the split() method.
   }
 
-  */
 }

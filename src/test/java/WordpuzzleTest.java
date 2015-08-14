@@ -18,14 +18,21 @@ public class WordpuzzleTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
-  /*
-  ~~UNIT TESTING~~
   @Test
-  public void methodName_whatIsBeingTested_desiredResult() {
-    App a = new App();
-    <Class> expValue = x;
-    assertEquals(expValue, a.methodName(param));
+  public void splitStringByChar_containsSeparatedChars_true() {
+    Wordpuzzle wp = new Wordpuzzle();
+    String expValue = "S";
+    assertEquals(expValue, wp.splitStringByChar("Short sentence.")[0]);
   }
+
+  @Test
+  public void splitStringByChar_okayWithNonLetters_true() {
+    Wordpuzzle wp = new Wordpuzzle();
+    String expValue = " ";
+    assertEquals(expValue, wp.splitStringByChar("Short sentence.")[5]);
+  }
+
+  /*
 
   ~~INTEGRATION TESTING~~
   @Test
