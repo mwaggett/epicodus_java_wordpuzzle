@@ -32,6 +32,20 @@ public class WordpuzzleTest extends FluentTest {
     assertEquals(expValue, wp.splitStringByChar("Short sentence.")[5]);
   }
 
+  @Test
+  public void replaceVowels_vowelBecomesDash_true() {
+    Wordpuzzle wp = new Wordpuzzle();
+    String expValue = "-";
+    assertEquals(expValue, wp.replaceVowels(wp.splitStringByChar("Cat dog."))[1]);
+  }
+
+  @Test
+  public void replaceVowels_nonvowelDoesntChange_true() {
+    Wordpuzzle wp = new Wordpuzzle();
+    String expValue = ".";
+    assertEquals(expValue, wp.replaceVowels(wp.splitStringByChar("Cat dog."))[7]);
+  }
+
   /*
 
   ~~INTEGRATION TESTING~~

@@ -42,4 +42,18 @@ public class Wordpuzzle {
     // literally just calling the split() method.
   }
 
+  public static String[] replaceVowels (String[] charArray) {
+    Integer count = 0;
+    for (String character : charArray) {
+      if (character.equals("a") || character.equals("e") || character.equals("i")
+          || character.equals("o") || character.equals("u") || character.equals("A")
+          || character.equals("E") || character.equals("I") || character.equals("O")
+          || character.equals("U")) {
+        charArray[count] = "-";
+      }
+      count += 1;
+    }
+    return charArray;
+  }
+
 }
