@@ -56,22 +56,18 @@ public class WordpuzzleTest extends FluentTest {
     assertEquals(expValue, wp.convertArraytoReadableString(charArray));
   }
 
-  /*
-
-  ~~INTEGRATION TESTING~~
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("Something");
+    assertThat(pageSource()).contains("Create puzzles for your friends");
   }
 
   @Test
-  public void newPage_desiredResult() {
-    goTo("starting_page_url");
-    fill("#input_id").with("input");
+  public void puzzle_vowelsRemoved() {
+    goTo("http://localhost:4567");
+    fill("#input").with("Look at this puzzle! Oh my gosh!");
     submit(".btn");
-    assertThat(pageSource()).contains("Some result of input");
+    assertThat(pageSource()).contains("L--k -t th-s p-zzl-! -h my g-sh!");
   }
-  */
 
 }

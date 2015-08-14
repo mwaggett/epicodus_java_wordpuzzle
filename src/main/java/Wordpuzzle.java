@@ -2,17 +2,16 @@ import java.util.Random;
 import java.util.HashMap;
 import java.util.Arrays;
 import java.util.ArrayList;
-//import java.util.StringBuilder;
 import java.lang.*;
 import static spark.Spark.*;
 import spark.ModelAndView;
-// import spark.template.velocity.VelocityTemplateEngine;
+import spark.template.velocity.VelocityTemplateEngine;
 import java.util.Map;
 
 public class Wordpuzzle {
 
   public static void main(String[] args) {
-    /*
+
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) -> {
@@ -21,18 +20,21 @@ public class Wordpuzzle {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/newPage", (request, response) -> {
+    get("/puzzle", (request, response) -> {
       HashMap model = new HashMap();
-      model.put("template", "templates/newPage.vtl");
+      model.put("template", "templates/puzzle.vtl");
 
-      <Class> param = request.queryParams("param");
-      model.put("param", param);
-      <Class> result = someMethod(param);
-      model.put("result", result);
+      String input = request.queryParams("input");
+      model.put("input", input);
+
+      String[] inputArray = splitStringByChar(input);
+      String[] puzzleArray = replaceVowels(inputArray);
+      String puzzle = convertArraytoReadableString(puzzleArray);
+      model.put("puzzle", puzzle);
 
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-    */
+
   }
 
   public static String[] splitStringByChar(String sentence) {
