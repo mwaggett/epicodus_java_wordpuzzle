@@ -35,7 +35,7 @@ _The guesser should not be able to see the original input, but I realize that
 
 ### Legal
 
-Copyright (c) 2015 **_Molly Waggett_**
+Copyright (c) 2015 **Molly Waggett**
 
 This software is licensed under the MIT license.
 
