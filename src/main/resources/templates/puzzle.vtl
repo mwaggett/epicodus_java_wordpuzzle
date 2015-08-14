@@ -1,3 +1,8 @@
 <h1>Word Puzzle!</h1>
-<h4>Can you solve the puzzle by figuring out which vowels belong where?</h4>
-<p><b>Here is your puzzle:</b> $puzzle</p>
+#if($anyVowels)
+  <h4>Can you solve the puzzle by figuring out which vowels belong where?</h4>
+  <p><b>Here is your puzzle:</b> $puzzle</p>
+#else
+  <h4>Uh oh!</h4>
+  <p>$puzzle<p>
+#end

@@ -27,11 +27,17 @@ public class Wordpuzzle {
       String input = request.queryParams("input");
       model.put("input", input);
 
-      String[] inputArray = splitStringByChar(input);
-      String[] puzzleArray = replaceVowels(inputArray);
-      String puzzle = convertArraytoReadableString(puzzleArray);
-      model.put("puzzle", puzzle);
-
+      Boolean anyVowels = checkForVowels(input);
+      model.put("anyVowels", anyVowels);
+      if (anyVowels) {
+        String[] inputArray = splitStringByChar(input);
+        String[] puzzleArray = replaceVowels(inputArray);
+        String puzzle = convertArraytoReadableString(puzzleArray);
+        model.put("puzzle", puzzle);
+      } else {
+        String puzzle = "That doesn't have any vowels!";
+        model.put("puzzle", puzzle);
+      }
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

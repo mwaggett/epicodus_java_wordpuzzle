@@ -84,4 +84,12 @@ public class WordpuzzleTest extends FluentTest {
     assertThat(pageSource()).contains("L--k -t th-s p-zzl-! -h my g-sh!");
   }
 
+  @Test
+  public void puzzle_noVowels() {
+    goTo("http://localhost:4567");
+    fill("#input").with("wtf jk");
+    submit(".btn");
+    assertThat(pageSource()).contains("That doesn't have any vowels!");
+  }
+
 }
