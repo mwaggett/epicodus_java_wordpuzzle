@@ -57,6 +57,20 @@ public class WordpuzzleTest extends FluentTest {
   }
 
   @Test
+  public void checkForVowels_containsVowels_true() {
+    Wordpuzzle wp = new Wordpuzzle();
+    Boolean expValue = true;
+    assertEquals(expValue, wp.checkForVowels("Short sentence."));
+  }
+
+  @Test
+  public void checkForVowels_doesntContainVowels_false() {
+    Wordpuzzle wp = new Wordpuzzle();
+    Boolean expValue = false;
+    assertEquals(expValue, wp.checkForVowels("wtf jk"));
+  }
+
+  @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Create puzzles for your friends");

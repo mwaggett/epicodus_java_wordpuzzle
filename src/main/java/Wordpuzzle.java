@@ -66,8 +66,20 @@ public class Wordpuzzle {
       puzzleBuild.append(charArray[i]);
     }
     String puzzle = puzzleBuild.toString();
-    System.out.println(puzzle);
     return puzzle;
+  }
+
+  public static Boolean checkForVowels(String sentence) {
+    String[] charArray = splitStringByChar(sentence);
+    String[] newArray = splitStringByChar(sentence);
+    newArray = replaceVowels(newArray);
+    for (Integer i = 0; i < newArray.length; i++) {
+      if (newArray[i].equals(charArray[i])) {}
+      else {
+        return true;
+      }
+    }
+    return false;
   }
 
 }
