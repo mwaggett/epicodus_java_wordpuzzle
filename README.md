@@ -1,15 +1,15 @@
-# _Word Puzzle_
+# Word Puzzle
 
-##### _Java BDD Code Review for Epicodus, August 14, 2015_
+##### _Java BDD Code Review for Epicodus, 14 August 2015_
 
-#### By _**Molly Waggett**_
+#### By Molly Waggett
 
 ## Description
 
-_This app allows the user to input a word or phrase, resulting in the same
+This app allows the user to input a word or phrase, resulting in the same
   word or phrase except with dashes ("-") replacing every vowel. The user may
   then give the resulting puzzle to a friend who must try to guess the original
-  word or phrase._
+  word or phrase.
 
 _The guesser should not be able to see the original input, but I realize that
   the input is visible as a parameter in the url. I know there is a way to
@@ -17,21 +17,21 @@ _The guesser should not be able to see the original input, but I realize that
 
 ## Setup
 
-* _Clone this repository._
-* _Using the command line, navigate to the top level of the cloned directory._
-* _Make sure you have gradle installed. Then run the following command in your terminal:_
-* _*gradle run*_
-* _Go to localhost:4567._
-* _Play!_
+* Clone this repository.
+* Using the command line, navigate to the top level of the cloned directory.
+* Make sure you have gradle installed. Then run the following command in your terminal:
+* _gradle run_
+* Go to localhost:4567.
+* Play!
 
 ## Technologies Used
 
-* _Java_
-* _Spark_
-* _Velocity_
-* _Gradle_
-* _JUnit_
-* _FluentLenium_
+* Java
+* Spark
+* Velocity
+* Gradle
+* JUnit
+* FluentLenium
 
 ### Legal
 
