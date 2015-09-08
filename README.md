@@ -20,7 +20,9 @@ _The guesser should not be able to see the original input, but I realize that
 * Clone this repository.
 * Using the command line, navigate to the top level of the cloned directory.
 * Make sure you have gradle installed. Then run the following command in your terminal:
-* _gradle run_
+```
+gradle run
+```
 * Go to localhost:4567.
 * Play!
 
